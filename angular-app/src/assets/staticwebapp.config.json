@@ -1,18 +1,31 @@
 {
-  "platform": { "apiRuntime": "node:18" },
+  "platform": {
+    "apiRuntime": "node:18"
+  },
   "routes": [
     {
       "route": "/api/products/*",
-      "methods": ["GET", "PUT", "POST", "DELETE"],
-      "allowedRoles": ["authenticated"]
+      "methods": [
+        "GET",
+        "PUT",
+        "POST",
+        "DELETE"
+      ],
+      "allowedRoles": [
+        "authenticated"
+      ]
     },
     {
       "route": "/api/discounts/*",
-      "allowedRoles": ["preferred"]
+      "allowedRoles": [
+        "authenticated"
+      ]
     },
     {
       "route": "/api/*",
-      "allowedRoles": ["authenticated"]
+      "allowedRoles": [
+        "authenticated"
+      ]
     },
     {
       "route": "/logout",
@@ -30,7 +43,10 @@
   ],
   "navigationFallback": {
     "rewrite": "index.html",
-    "exclude": ["/*.{css,scss,js,png,gif,ico,jpg}", "/images/*"]
+    "exclude": [
+      "/*.{css,scss,js,png,gif,ico,jpg}",
+      "/images/*"
+    ]
   },
   "responseOverrides": {
     "404": {
